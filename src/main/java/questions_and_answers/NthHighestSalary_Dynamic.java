@@ -32,7 +32,7 @@ public class NthHighestSalary_Dynamic {
                     .sorted(Collections.reverseOrder(Map.Entry.comparingByKey()))
                     .collect(Collectors.toList())
                     .get(num - 1);
-        }catch (IndexOutOfBoundsException e){
+            }catch (IndexOutOfBoundsException e){
             List<String> elist = new ArrayList<>();
             elist.add("Index out of bounds for length " + num);
             return new AbstractMap.SimpleEntry<Integer, List<String>>(0,elist);

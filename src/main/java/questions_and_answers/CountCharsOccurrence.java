@@ -10,7 +10,11 @@ public class CountCharsOccurrence {
 
         String str = "ILoveLeetCode";
 
-        Map<String, Long> map = Arrays.stream(str.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        Map<String, Long> map =
+                Arrays.stream(str.split(""))
+                        .map(latter-> latter.toLowerCase())
+                        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
         System.out.println(map);
     }
 }
